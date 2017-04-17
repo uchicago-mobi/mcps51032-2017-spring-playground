@@ -25,7 +25,7 @@ helloLabel.text = "Hello Label!"
 var attributedString = NSMutableAttributedString()
 attributedString = NSMutableAttributedString(string: "Fancy Hello World!",
                                              attributes: [
-                                              NSFontAttributeName:UIFont(name: "Georgia", size: 50.0)!
+                                              NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!
   ])
 helloLabel.attributedText = attributedString
 

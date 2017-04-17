@@ -46,7 +46,7 @@ attributedString.addAttribute(NSStrokeWidthAttributeName,
 // Change the background color
 attributedString.addAttribute(NSBackgroundColorAttributeName,
                               value: UIColor.yellow,
-                              range: NSRange(location: 0, length: attributedString.length))
+                              range: NSRange(location: 0, length: 6))
 
 
 //: [Next](@next)
