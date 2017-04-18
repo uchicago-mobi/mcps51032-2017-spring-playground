@@ -8,7 +8,7 @@
 
 import UIKit
 import GreetingKit
-
+import ClassKit
 
 class ViewController: UIViewController {
 
@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     let g = Greetings()
     g.happy()
+    
+    let c = ClassGreeting()
+    c.crazy()
+
     
   }
 

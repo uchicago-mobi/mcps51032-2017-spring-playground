@@ -16,6 +16,10 @@
 		972105BB1EA5421200D60ADA /* GreetingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972105B41EA5421200D60ADA /* GreetingKit.framework */; };
 		972105BC1EA5421200D60ADA /* GreetingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972105B41EA5421200D60ADA /* GreetingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		972105C21EA5425A00D60ADA /* Greetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972105C11EA5425A00D60ADA /* Greetings.swift */; };
+		972105ED1EA5A26D00D60ADA /* ClassKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 972105EB1EA5A26D00D60ADA /* ClassKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		972105F01EA5A26D00D60ADA /* ClassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972105E91EA5A26D00D60ADA /* ClassKit.framework */; };
+		972105F11EA5A26D00D60ADA /* ClassKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972105E91EA5A26D00D60ADA /* ClassKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		972105F61EA5A28F00D60ADA /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972105F51EA5A28F00D60ADA /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,13 @@
 			remoteGlobalIDString = 972105B31EA5421200D60ADA;
 			remoteInfo = GreetingKit;
 		};
+		972105EE1EA5A26D00D60ADA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 972105921EA541DE00D60ADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 972105E81EA5A26D00D60ADA;
+			remoteInfo = ClassKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				972105F11EA5A26D00D60ADA /* ClassKit.framework in Embed Frameworks */,
 				972105BC1EA5421200D60ADA /* GreetingKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -54,6 +66,10 @@
 		972105B61EA5421200D60ADA /* GreetingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GreetingKit.h; sourceTree = "<group>"; };
 		972105B71EA5421200D60ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		972105C11EA5425A00D60ADA /* Greetings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Greetings.swift; sourceTree = "<group>"; };
+		972105E91EA5A26D00D60ADA /* ClassKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClassKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972105EB1EA5A26D00D60ADA /* ClassKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassKit.h; sourceTree = "<group>"; };
+		972105EC1EA5A26D00D60ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		972105F51EA5A28F00D60ADA /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +77,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972105F01EA5A26D00D60ADA /* ClassKit.framework in Frameworks */,
 				972105BB1EA5421200D60ADA /* GreetingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		972105B01EA5421200D60ADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		972105E51EA5A26D00D60ADA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,6 +104,7 @@
 			children = (
 				9721059C1EA541DF00D60ADA /* 2017-Session3-EmbeddedFrameworks */,
 				972105B51EA5421200D60ADA /* GreetingKit */,
+				972105EA1EA5A26D00D60ADA /* ClassKit */,
 				9721059B1EA541DF00D60ADA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +114,7 @@
 			children = (
 				9721059A1EA541DF00D60ADA /* 2017-Session3-EmbeddedFrameworks.app */,
 				972105B41EA5421200D60ADA /* GreetingKit.framework */,
+				972105E91EA5A26D00D60ADA /* ClassKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +142,16 @@
 			path = GreetingKit;
 			sourceTree = "<group>";
 		};
+		972105EA1EA5A26D00D60ADA /* ClassKit */ = {
+			isa = PBXGroup;
+			children = (
+				972105EB1EA5A26D00D60ADA /* ClassKit.h */,
+				972105EC1EA5A26D00D60ADA /* Info.plist */,
+				972105F51EA5A28F00D60ADA /* Class.swift */,
+			);
+			path = ClassKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -124,6 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				972105B81EA5421200D60ADA /* GreetingKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		972105E61EA5A26D00D60ADA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				972105ED1EA5A26D00D60ADA /* ClassKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +187,7 @@
 			);
 			dependencies = (
 				972105BA1EA5421200D60ADA /* PBXTargetDependency */,
+				972105EF1EA5A26D00D60ADA /* PBXTargetDependency */,
 			);
 			name = "2017-Session3-EmbeddedFrameworks";
 			productName = "2017-Session3-EmbeddedFrameworks";
@@ -167,6 +212,24 @@
 			productReference = 972105B41EA5421200D60ADA /* GreetingKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		972105E81EA5A26D00D60ADA /* ClassKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 972105F21EA5A26D00D60ADA /* Build configuration list for PBXNativeTarget "ClassKit" */;
+			buildPhases = (
+				972105E41EA5A26D00D60ADA /* Sources */,
+				972105E51EA5A26D00D60ADA /* Frameworks */,
+				972105E61EA5A26D00D60ADA /* Headers */,
+				972105E71EA5A26D00D60ADA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClassKit;
+			productName = ClassKit;
+			productReference = 972105E91EA5A26D00D60ADA /* ClassKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,6 +245,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					972105B31EA5421200D60ADA = {
+						CreatedOnToolsVersion = 8.3.1;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					972105E81EA5A26D00D60ADA = {
 						CreatedOnToolsVersion = 8.3.1;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
@@ -203,6 +271,7 @@
 			targets = (
 				972105991EA541DF00D60ADA /* 2017-Session3-EmbeddedFrameworks */,
 				972105B31EA5421200D60ADA /* GreetingKit */,
+				972105E81EA5A26D00D60ADA /* ClassKit */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +288,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		972105B21EA5421200D60ADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		972105E71EA5A26D00D60ADA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,6 +321,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		972105E41EA5A26D00D60ADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				972105F61EA5A28F00D60ADA /* Class.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -252,6 +336,11 @@
 			isa = PBXTargetDependency;
 			target = 972105B31EA5421200D60ADA /* GreetingKit */;
 			targetProxy = 972105B91EA5421200D60ADA /* PBXContainerItemProxy */;
+		};
+		972105EF1EA5A26D00D60ADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 972105E81EA5A26D00D60ADA /* ClassKit */;
+			targetProxy = 972105EE1EA5A26D00D60ADA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -441,6 +530,51 @@
 			};
 			name = Release;
 		};
+		972105F31EA5A26D00D60ADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ClassKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.uchicago.ClassKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		972105F41EA5A26D00D60ADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ClassKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.uchicago.ClassKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -466,6 +600,14 @@
 			buildConfigurations = (
 				972105BE1EA5421200D60ADA /* Debug */,
 				972105BF1EA5421200D60ADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		972105F21EA5A26D00D60ADA /* Build configuration list for PBXNativeTarget "ClassKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				972105F31EA5A26D00D60ADA /* Debug */,
+				972105F41EA5A26D00D60ADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
