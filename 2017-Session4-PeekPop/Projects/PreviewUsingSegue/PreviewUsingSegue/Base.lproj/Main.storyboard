@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fgI-n5-a7G">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master-->
+        <scene sceneID="kDk-9L-dw1">
+            <objects>
+                <navigationController title="Master" id="YHZ-lh-xMl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="HNl-TU-IYA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pSH-QN-BwW" kind="relationship" relationship="rootViewController" id="4yh-Aa-5oJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gx6-sL-2cE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="-630"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="iJ0-JA-lmy">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" title="Detail" id="UO3-Fd-HGD" customClass="DetailViewController" customModule="PreviewUsingSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwu-gD-8Wc"/>
+                        <viewControllerLayoutGuide type="bottom" id="3xU-8k-pgs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x5V-EX-4eF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoa-mR-Ca1">
+                                <rect key="frame" x="20" y="325" width="335" height="17"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" size="system"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yoa-mR-Ca1" firstAttribute="centerY" secondItem="x5V-EX-4eF" secondAttribute="centerY" id="8aj-Td-SMF"/>
+                            <constraint firstAttribute="trailing" secondItem="yoa-mR-Ca1" secondAttribute="trailing" constant="20" symbolic="YES" id="L7g-m9-CjX"/>
+                            <constraint firstItem="yoa-mR-Ca1" firstAttribute="leading" secondItem="x5V-EX-4eF" secondAttribute="leading" constant="20" symbolic="YES" id="ZMo-Fg-AZn"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="60e-GR-znu"/>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="yoa-mR-Ca1" id="fUy-55-J0G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJy-Qt-MxX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="129"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="CFy-7S-Pcm">
+            <objects>
+                <splitViewController id="fgI-n5-a7G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="YHZ-lh-xMl" kind="relationship" relationship="masterViewController" id="FyX-of-ezq"/>
+                        <segue destination="KzA-la-qVP" kind="relationship" relationship="detailViewController" id="SqT-NZ-vfR"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahg-cg-TEG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-856" y="-330"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="jN3-m1-jqN">
+            <objects>
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="pSH-QN-BwW" customClass="MasterViewController" customModule="PreviewUsingSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZtV-3Y-QO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="j0T-jx-G7C" style="IBUITableViewCellStyleDefault" id="ub5-9d-mW6">
+                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ub5-9d-mW6" id="jOQ-0C-405">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j0T-jx-G7C">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="KzA-la-qVP" kind="showDetail" identifier="showDetail" id="Qtg-SW-mAc">
+                                        <segue key="commit" inheritsFrom="parent" id="UsT-hr-slg"/>
+                                        <segue key="preview" destination="KzA-la-qVP" identifier="previewDetail" id="Cvb-tO-Db5"/>
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="pSH-QN-BwW" id="NWA-Xd-vTL"/>
+                            <outlet property="delegate" destination="pSH-QN-BwW" id="RCZ-IS-BfT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MasterViewController" id="hel-Gf-8GK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0P-zn-7UP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="-630"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SWr-WD-nKQ">
+            <objects>
+                <navigationController id="KzA-la-qVP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4tg-RX-Yaa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UO3-Fd-HGD" kind="relationship" relationship="rootViewController" id="CJc-Bd-ylO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqL-V9-7zv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qtg-SW-mAc"/>
+    </inferredMetricsTieBreakers>
+</document>
