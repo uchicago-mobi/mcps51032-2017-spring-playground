@@ -1,0 +1,72 @@
+//
+//  DataKitManager.swift
+//
+//  Created by T. Andrew Binkowski on 4/19/16.
+//  Copyright (c) 2015 The University of Chicago. All rights reserved.
+//
+
+import Foundation
+
+/// To enable extension data sharing, we need to use an app group
+let sharedAppGroup: String = "group.2017-extend-this-app"
+
+/// The key for our defaults storage
+let favoritesKey: String = "Favorites"
+
+
+//
+// MARK: - DataKitManagerProtocol
+//
+
+
+/// A protocol that all our data storage methods will conform to so that we can
+/// use a consistent API when accessing our data
+protocol DataKitManager {
+    func add(object anObject: NSObject)
+    func reset()
+    func currentList() -> NSMutableArray
+}
+
+
+//
+// MARK: - Local DefaultsManager
+//
+
+
+/// Store NSUserDefaults in local defaults in app group suite;  Use
+/// a singleton so that we can easily access the data across different
+/// extension points
+public class LocalDefaultsManager: DataKitManager {
+  
+    public static let sharedInstance = LocalDefaultsManager()
+    let sharedDefaults: UserDefaults?
+    var favorites: NSMutableArray?
+  
+    init() {
+        sharedDefaults = UserDefaults(suiteName: sharedAppGroup)
+        print(sharedDefaults?.dictionaryRepresentation() as Any)
+    }
+  
+    public func add(object anObject: NSObject) {
+        let current: NSMutableArray = currentList()
+        current.add(anObject)
+        sharedDefaults?.set(current, forKey: favoritesKey)
+        sharedDefaults?.synchronize()
+    }
+  
+    ///
+    public func currentList() -> NSMutableArray {
+        var current: NSMutableArray = []
+        if let tempNames: NSArray = sharedDefaults?.array(forKey: favoritesKey) as NSArray? {
+            current = tempNames.mutableCopy() as! NSMutableArray
+        }
+        return current
+    }
+
+    ///
+    public func reset() {
+        sharedDefaults?.set(NSMutableArray(), forKey: favoritesKey)
+        sharedDefaults?.synchronize()
+    }
+}
+
