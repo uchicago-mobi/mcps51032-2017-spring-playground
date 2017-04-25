@@ -29,9 +29,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="223.5"/>
                                         <state key="normal" title="Peek"/>
                                         <connections>
-                                            <segue destination="s2u-LM-HZp" kind="show" id="DmM-wS-vdu">
-                                                <segue key="commit" inheritsFrom="parent" id="dSl-bn-8bP"/>
-                                                <segue key="preview" inheritsFrom="commit" id="8Bf-LW-VH2"/>
+                                            <segue destination="s2u-LM-HZp" kind="show" id="Xgm-S8-GyS">
+                                                <segue key="commit" inheritsFrom="parent" id="xXj-FY-oAy"/>
+                                                <segue key="preview" inheritsFrom="commit" id="vDa-sb-xLo"/>
                                             </segue>
                                         </connections>
                                     </button>
@@ -115,6 +115,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DmM-wS-vdu"/>
+        <segue reference="Xgm-S8-GyS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,7 +13,6 @@ import CoreData
 // We need to override the default location of the core data store
 // to use the app groups
 final class PersistentContainer: NSPersistentContainer {
-  
   //
   internal override class func defaultDirectoryURL() -> URL {
     var url = super.defaultDirectoryURL()
@@ -47,8 +46,6 @@ public class CoreDataManager {
   }()
   */
 
-  
-  
   // MARK: - Core Data stack
   lazy public var persistentContainer: NSPersistentContainer = {
     /*
