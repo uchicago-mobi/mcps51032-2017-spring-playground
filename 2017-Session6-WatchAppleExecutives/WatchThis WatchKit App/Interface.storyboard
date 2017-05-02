@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchThis_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="NzO-M0-dYE">
+                            <items>
+                                <label width="136" alignment="left" verticalAlignment="bottom" text="headerLabel" textAlignment="center" numberOfLines="0" id="vSX-dZ-nKz">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
+                                <table alignment="left" verticalAlignment="bottom" id="klK-Wj-SSG">
+                                    <items>
+                                        <tableRow identifier="FaceRow" id="yaX-hh-jCe" customClass="FaceRow" customModule="WatchThis_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" id="9JW-Sl-TFp">
+                                                <items>
+                                                    <imageView width="40" height="40" alignment="left" image="Tim Cook" contentMode="scaleAspectFill" id="oK4-d1-bRh"/>
+                                                    <group alignment="left" layout="vertical" id="DS7-Yf-ezO">
+                                                        <items>
+                                                            <label alignment="left" text="Label" id="PBL-nT-b9F">
+                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            </label>
+                                                            <label alignment="left" text="Label" id="OUX-Th-hRH">
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                                <connections>
+                                                    <segue destination="1XV-ei-UYW" kind="push" identifier="FaceDetailSegue" id="I8w-XG-weE"/>
+                                                </connections>
+                                            </group>
+                                            <connections>
+                                                <outlet property="image" destination="oK4-d1-bRh" id="Anw-T3-EF6"/>
+                                                <outlet property="nameLabel" destination="PBL-nT-b9F" id="wvr-hE-mAE"/>
+                                                <outlet property="titleLabel" destination="OUX-Th-hRH" id="YrC-yr-aqB"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="09c-Ps-ftS">
+                        <items>
+                            <menuItem title="Delete Favorites" icon="trash" id="Zx7-80-k3c">
+                                <connections>
+                                    <action selector="tapMenuTrash" destination="AgC-eL-Hgc" id="rQU-Vs-iMl"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="headerLabel" destination="vSX-dZ-nKz" id="uux-He-vUD"/>
+                        <outlet property="table" destination="klK-Wj-SSG" id="8jS-AU-pEb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="137" y="74"/>
+        </scene>
+        <!--FaceDetailController-->
+        <scene sceneID="2Fk-7c-EaS">
+            <objects>
+                <controller identifier="FaceDetailController" id="1XV-ei-UYW" customClass="FaceDetailController" customModule="WatchThis_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Label" id="3sM-kt-But">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <imageView width="1" height="100" alignment="left" verticalAlignment="center" contentMode="scaleAspectFill" id="g4n-P6-sTb"/>
+                        <label width="1" alignment="left" verticalAlignment="bottom" text="Label" id="O5o-xY-otB">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Favorite" id="KCb-zz-4gf">
+                            <connections>
+                                <action selector="tapFavorite" destination="1XV-ei-UYW" id="FIK-wq-yNl"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="g4n-P6-sTb" id="teu-Sb-4oL"/>
+                        <outlet property="name" destination="3sM-kt-But" id="zEZ-VY-lBf"/>
+                        <outlet property="positionTitle" destination="O5o-xY-otB" id="pte-vn-97L"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="461" y="74"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Static Notification" numberOfLines="0" id="XkS-y5-khE"/>
+                        <label alignment="left" text="Can only contain static resources." textAlignment="center" numberOfLines="0" id="yzi-mQ-6aY">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
+                        <color key="sashColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="192" y="682"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller contentMode="scaleAspectFill" spacing="4" id="gdX-wl-uQE" customClass="NotificationController" customModule="WatchThis_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="200" alignment="center" verticalAlignment="center" layout="vertical" id="vcq-nA-uOd">
+                            <items>
+                                <label width="1" alignment="left" text="Dynamic Notification" textAlignment="center" numberOfLines="2" id="LM2-SI-iT3"/>
+                                <imageView alignment="center" verticalAlignment="center" image="Angela Ahrendts" id="BUp-Kc-WQd"/>
+                                <label alignment="left" text="This is the placeholder text." numberOfLines="0" id="Xa1-gA-Yp8"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="faceImage" destination="BUp-Kc-WQd" id="5PE-R4-E3A"/>
+                        <outlet property="messageLabel" destination="Xa1-gA-Yp8" id="Vmo-XG-YfP"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="508" y="681.5"/>
+        </scene>
+    </scenes>
+</document>
