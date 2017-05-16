@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "93B533CA03D947E87541D43D110BA39BCB02F0A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "93B533CA03D947E87541D43D110BA39BCB02F0A1" : 0,
+    "80455F472DFD245283446D68437C8BB0B1376372" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F78C9FBD-1220-48A1-B5B7-864CE32E27CC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "93B533CA03D947E87541D43D110BA39BCB02F0A1" : "MPCS51032-2016-Spring-Playgrounds\/",
+    "80455F472DFD245283446D68437C8BB0B1376372" : "MPCS51032-2015-Spring-Playgrounds"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DropInTheBucket",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Session7-DropInTheBucket\/DropInTheBucket.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uchicago-mobi\/MPCS51032-2015-Spring-Playgrounds.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80455F472DFD245283446D68437C8BB0B1376372"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uchicago-mobi\/MPCS51032-2016-Spring-Playgrounds.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "93B533CA03D947E87541D43D110BA39BCB02F0A1"
+    }
+  ]
+}

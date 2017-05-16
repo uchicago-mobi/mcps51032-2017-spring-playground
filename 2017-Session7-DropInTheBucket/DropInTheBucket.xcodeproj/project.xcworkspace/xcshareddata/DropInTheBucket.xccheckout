@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F78C9FBD-1220-48A1-B5B7-864CE32E27CC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DropInTheBucket</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>80455F472DFD245283446D68437C8BB0B1376372</key>
+		<string>https://github.com/uchicago-mobi/MPCS51032-2015-Spring-Playgrounds.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Session7-DropInTheBucket/DropInTheBucket.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>80455F472DFD245283446D68437C8BB0B1376372</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/uchicago-mobi/MPCS51032-2015-Spring-Playgrounds.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>80455F472DFD245283446D68437C8BB0B1376372</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80455F472DFD245283446D68437C8BB0B1376372</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MPCS51032-2015-Spring-Playgrounds</string>
+		</dict>
+	</array>
+</dict>
+</plist>
