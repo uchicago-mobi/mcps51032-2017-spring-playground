@@ -23,6 +23,8 @@ open class LocalDefaultsManager {
     
     init() {
         sharedDefaults = UserDefaults(suiteName: sharedAppGroup)
+      let dir = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: sharedAppGroup)
+      print("App Group Path: \(dir)")
         print(sharedDefaults?.dictionaryRepresentation() ?? "No defaults found")
     }
     
